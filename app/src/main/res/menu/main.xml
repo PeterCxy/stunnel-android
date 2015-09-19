@@ -7,7 +7,11 @@
 	<item
 		android:id="@+id/revert_to_default"
 		android:title="@string/revert_to_default"/>
-    
+
+	<item
+		android:id="@+id/log"
+		android:title="@string/log"/>
+
 	<item
 		android:id="@+id/switch_action"
 		android:title="@string/on_off"

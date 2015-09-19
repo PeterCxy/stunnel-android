@@ -134,6 +134,25 @@ public class Utility
 		}
 	}
 	
+	public static String readLog() {
+		File f = new File(HOME + LOG);
+
+		if (!f.exists()) {
+			return "";
+		} else {
+			try {
+				byte[] buf = readInputStream(new FileInputStream(f));
+				if (buf != null) {
+					return new String(buf, "UTF-8");
+				} else {
+					return null;
+				}
+			} catch (Exception e) {
+				return null;
+			}
+		}
+	}
+	
 	public static byte[] readInputStream(InputStream in) {
 		byte[] buf = new byte[512];
 		int len;

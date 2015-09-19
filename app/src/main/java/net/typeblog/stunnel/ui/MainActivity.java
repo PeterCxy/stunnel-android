@@ -59,6 +59,9 @@ public class MainActivity extends Activity implements CompoundButton.OnCheckedCh
 			case R.id.revert_to_default:
 				mConfig.setText(DEF_CONFIG);
 				return true;
+			case R.id.log:
+				startActivity(new Intent(this, LogActivity.class));
+				return true;
 			default:
 				return super.onOptionsItemSelected(item);
 		}
