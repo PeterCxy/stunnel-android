@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item
+		android:id="@+id/save_config"
+		android:title="@string/save_config"/>
+	
+	<item
+		android:id="@+id/revert_to_default"
+		android:title="@string/revert_to_default"/>
+    
+	<item
+		android:id="@+id/switch_action"
+		android:title="@string/on_off"
+		android:showAsAction="always"
+		android:actionLayout="@layout/switch_action"/>
+</menu>

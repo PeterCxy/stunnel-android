@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">STunnel</string>
-    <string name="hello_world">Hello world!</string>
+	<string name="app_name">STunnel</string>
 
+	<string name="save_config">Save config</string>
+	<string name="revert_to_default">Revert to default</string>
+	<string name="on_off">On / Off</string>
+	
+	<string name="running">STunnel is running</string>
+	<string name="desc">TLS tunneling service</string>
 </resources>
