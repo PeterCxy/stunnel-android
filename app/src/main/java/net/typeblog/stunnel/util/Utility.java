@@ -19,7 +19,7 @@ public class Utility
 	private static final String TAG = Utility.class.getSimpleName();
 	
 	public static void checkAndExtract(Context context) {
-		if (new File(HOME + EXECTUABLE).exists()) {
+		if (new File(HOME + EXECUTABLE).exists()) {
 			return;
 		}
 		
@@ -28,8 +28,8 @@ public class Utility
 		// Extract stunnel exectuable
 		AssetManager am = context.getAssets();
 		try {
-			InputStream in = am.open(EXECTUABLE);
-			OutputStream out = new FileOutputStream(HOME + EXECTUABLE);
+			InputStream in = am.open(EXECUTABLE);
+			OutputStream out = new FileOutputStream(HOME + EXECUTABLE);
 			
 			byte[] buf = new byte[512];
 			int len;
@@ -42,7 +42,7 @@ public class Utility
 			out.flush();
 			out.close();
 			
-			Runtime.getRuntime().exec("chmod 777 " + HOME + EXECTUABLE);
+			Runtime.getRuntime().exec("chmod 777 " + HOME + EXECUTABLE);
 		} catch (Exception e) {
 			
 		}
@@ -55,7 +55,7 @@ public class Utility
 	public static void start() {
 		if (!isRunning()) {
 			try {
-				Runtime.getRuntime().exec(HOME + EXECTUABLE + " " + HOME + CONFIG).waitFor();
+				Runtime.getRuntime().exec(HOME + EXECUTABLE + " " + HOME + CONFIG).waitFor();
 			} catch (Exception e) {
 				
 			}
